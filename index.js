@@ -13,6 +13,7 @@ app.use(cors({
     ]
 }));
 connectdb()
+console.log("all ok")
 app.get("/",(req,res)=>{
     res.send("<h1>innovation club server is running</h1>")
 })
