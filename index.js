@@ -6,12 +6,7 @@ const addData=require("./fillForm")
 const seeData=require("./getForm")
 const {InnovationClub,connectdb}=require("./connectDB")
 app.use(express.json())
-app.use(cors({
-    origin:[
-        "http://localhost:5173",
-        "https://www.stackenzo.com"
-    ]
-}));
+app.use(cors());
 connectdb()
 console.log("all ok")
 app.get("/",(req,res)=>{
