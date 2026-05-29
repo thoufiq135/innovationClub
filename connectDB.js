@@ -49,6 +49,10 @@ const InnovationClub = mongoose.model(
 
 async function connectdb() {
   try {
+    console.log("mongoURI:", process.env.mongoURI);
+    if(!process.env.mongoURI){
+      return false
+    }
     await mongoose.connect(process.env.mongoURI);
     console.log("Connected to DB");
     return true;
